@@ -13,11 +13,9 @@ struct HeadingView: View {
   
     var body: some View {
       HStack {
-        Image(headingImages)
+        Image(systemName: headingImages)
           .foregroundColor(.accentColor)
           .imageScale(.large)
-//          .resizable()
-//          .frame(width: 30, height: 30)
         
         Text(headingText)
           .font(.title3)

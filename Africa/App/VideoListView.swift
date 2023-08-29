@@ -15,8 +15,14 @@ struct VideoListView: View {
     NavigationView {
       List {
         ForEach(videos) { video in
-          VideoListItemView(video: video)
-            .padding(.vertical, 8)
+          NavigationLink(
+            destination: VideoPlayerView(
+              videoSelected: video.id,
+              videoTitle: video.name
+            )
+          ) {
+            renderVideoListItemView(video: video)
+          }
         } //: LOOP
       } //: LIST
       .listStyle(InsetGroupedListStyle()) // Membuat warna background menjadi abu2 dan memiliki corner radius
@@ -33,6 +39,11 @@ struct VideoListView: View {
         }
       }
     } //: NAVIGATION VIEW
+  }
+  
+  private func renderVideoListItemView(video: VideoModel) -> some View {
+    VideoListItemView(video: video)
+      .padding(.vertical, 8)
   }
 }
 

@@ -53,9 +53,11 @@ struct ContentView: View {
               NavigationLink(destination: AnimalDetailView(animal: animal)) {
                 AnimalListItemView(animal: animal)
               }
-            }
-          }
-
+            } //: LOOP
+            CreditsView()
+              .modifier(CenterModifier()) // kita pakai ini karena by default, List View memiliki default preferences. karena terdapat bug kita gunakan ini
+              
+          } //: LIST
         }
       }
       .navigationTitle("Africa")

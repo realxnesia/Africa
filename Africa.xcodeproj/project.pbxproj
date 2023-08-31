@@ -45,6 +45,8 @@
 		E694E6772A9F383F003AA15E /* AnimalGridItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E694E6762A9F383F003AA15E /* AnimalGridItemView.swift */; };
 		E694E67D2A9F3FB0003AA15E /* Stickers.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E694E67C2A9F3FB0003AA15E /* Stickers.xcassets */; };
 		E694E6812A9F3FB0003AA15E /* Stickers.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = E694E67A2A9F3FAD003AA15E /* Stickers.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		E694E6872A9F45E0003AA15E /* CreditsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E694E6862A9F45E0003AA15E /* CreditsView.swift */; };
+		E694E68A2A9F48D2003AA15E /* CenterModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E694E6892A9F48D2003AA15E /* CenterModifier.swift */; };
 		E6D42BF42A73B2CA0070B058 /* HeadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D42BF32A73B2CA0070B058 /* HeadingView.swift */; };
 		E6D42BF62A73B56D0070B058 /* InsideGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D42BF52A73B56D0070B058 /* InsideGalleryView.swift */; };
 		E6D42BF82A73BB220070B058 /* InsetFactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D42BF72A73BB220070B058 /* InsetFactView.swift */; };
@@ -118,6 +120,8 @@
 		E694E67A2A9F3FAD003AA15E /* Stickers.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Stickers.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		E694E67C2A9F3FB0003AA15E /* Stickers.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Stickers.xcassets; sourceTree = "<group>"; };
 		E694E67E2A9F3FB0003AA15E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E694E6862A9F45E0003AA15E /* CreditsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsView.swift; sourceTree = "<group>"; };
+		E694E6892A9F48D2003AA15E /* CenterModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterModifier.swift; sourceTree = "<group>"; };
 		E6D42BF32A73B2CA0070B058 /* HeadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadingView.swift; sourceTree = "<group>"; };
 		E6D42BF52A73B56D0070B058 /* InsideGalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsideGalleryView.swift; sourceTree = "<group>"; };
 		E6D42BF72A73BB220070B058 /* InsetFactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsetFactView.swift; sourceTree = "<group>"; };
@@ -159,6 +163,7 @@
 		E64F74592A68C881001FD7AF /* Africa */ = {
 			isa = PBXGroup;
 			children = (
+				E694E6882A9F48BF003AA15E /* Modifier */,
 				E694E66B2A9DE2DB003AA15E /* Helpers */,
 				E64F74962A691B20001FD7AF /* Extennsion */,
 				E64F74932A691A2B001FD7AF /* Model */,
@@ -238,6 +243,7 @@
 				E694E6722A9EF4D7003AA15E /* MapAnnotationView.swift */,
 				E694E6742A9F12B4003AA15E /* MotionAnimationView.swift */,
 				E694E6762A9F383F003AA15E /* AnimalGridItemView.swift */,
+				E694E6862A9F45E0003AA15E /* CreditsView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -276,6 +282,14 @@
 				E694E67E2A9F3FB0003AA15E /* Info.plist */,
 			);
 			path = Stickers;
+			sourceTree = "<group>";
+		};
+		E694E6882A9F48BF003AA15E /* Modifier */ = {
+			isa = PBXGroup;
+			children = (
+				E694E6892A9F48D2003AA15E /* CenterModifier.swift */,
+			);
+			path = Modifier;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -412,8 +426,10 @@
 				E694E6772A9F383F003AA15E /* AnimalGridItemView.swift in Sources */,
 				E64F748D2A68D0ED001FD7AF /* GalleryView.swift in Sources */,
 				E65BFF1A2A8FCF29003820BD /* VideoListItemView.swift in Sources */,
+				E694E6872A9F45E0003AA15E /* CreditsView.swift in Sources */,
 				E64F74982A691B37001FD7AF /* CodableBundleExtension.swift in Sources */,
 				E694E6752A9F12B5003AA15E /* MotionAnimationView.swift in Sources */,
+				E694E68A2A9F48D2003AA15E /* CenterModifier.swift in Sources */,
 				E6D42BF42A73B2CA0070B058 /* HeadingView.swift in Sources */,
 				E694E66A2A9DE186003AA15E /* VideoPlayerView.swift in Sources */,
 			);
@@ -568,6 +584,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.dhikadityre.Africa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -598,6 +617,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.dhikadityre.Africa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
